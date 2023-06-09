@@ -1,0 +1,78 @@
+.about{
+    position: relative;
+    z-index: 1;
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+    &__li{
+        width: calc(33.333% - 15.33px);
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #EDF6FA;
+        border-radius: 90px;
+        padding: 20px 40px;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 23px;
+        color: #081626;
+        svg{
+            margin-right: 10px;
+        }
+    }
+    &__title{
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #000000;
+        margin-bottom: 10px;
+        span{
+            color: #3BA4D1;
+        }
+    }
+    &__desc{
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 23px;
+        color: #081626;
+        margin-bottom: 30px;
+    }
+    &__form{
+        background: #FFFFFF;
+        border: 1px solid #B4B4B4;
+        border-radius: 8px;
+        max-width: 917px;
+        width: 100%;
+        position: relative;
+        height: 100px;
+        align-items: flex-start;
+        &::before{
+            content: '';
+            position: absolute;
+            max-width: 905px;
+            width: 100%;
+            top: 0;
+            height: 38px;
+            background: url(../img/about-ruler.svg) center / cover no-repeat;
+            z-index: 1;
+        }
+    }
+    &__input{
+        padding: 52px 0 25px 30px !important;
+    }
+    &__btn{
+        border-radius: 0px 8px 8px 0px;
+        padding: 53px 67px 25px 67px;
+        &::before{
+            display: none;
+        }
+    }
+}
