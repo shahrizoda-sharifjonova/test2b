@@ -2,6 +2,24 @@
     position: relative;
     z-index: 1;
     padding-bottom: 94px;
+    isolation: isolate;
+    &::before{
+        content: '';
+        position: absolute;
+        background: url(../img/tube-1.svg) center / cover no-repeat;
+        width: 195px;
+        height: 510px;
+        top: -340px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        background: url(../img/tube-2.svg) center / cover no-repeat;
+        width: 230px;
+        height: 425px;
+        top: 200px;
+        right: 0;
+    }
     &__list{
         display: flex;
         align-items: center;
