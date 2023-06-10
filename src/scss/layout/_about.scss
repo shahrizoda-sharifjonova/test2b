@@ -1,6 +1,7 @@
 .about{
     position: relative;
     z-index: 1;
+    padding-bottom: 94px;
     &__list{
         display: flex;
         align-items: center;
@@ -54,6 +55,7 @@
         position: relative;
         height: 100px;
         align-items: flex-start;
+        margin-bottom: 30px;
         &::before{
             content: '';
             position: absolute;
@@ -73,6 +75,69 @@
         padding: 53px 67px 25px 67px;
         &::before{
             display: none;
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 84px;
+    }
+    &__item{
+        width: calc(20% - 38.4px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+    &__img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 114px;
+        width: 114px;
+        height: 114px;
+        background: #FFFFFF;
+        opacity: 0.5;
+        box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+    &__subtitle{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 147.9%;
+        text-align: center;
+        color: #000000;
+    }
+    &__info{
+        max-width: 1024px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.9%;
+        text-align: center;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            max-width: 760px;
+            width: 100%;
+            height: 150px;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url(../img/about-circles.svg) center / cover no-repeat;
         }
     }
 }

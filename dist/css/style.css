@@ -688,6 +688,7 @@
 .about {
   position: relative;
   z-index: 1;
+  padding-bottom: 94px;
 }
 
 .about__list {
@@ -764,6 +765,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: 30px;
 }
 
 .about__form::before {
@@ -788,6 +790,98 @@
 
 .about__btn::before {
   display: none;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 84px;
+}
+
+.about__item {
+  width: calc(20% - 38.4px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 114px;
+  width: 114px;
+  height: 114px;
+  background: #FFFFFF;
+  opacity: 0.5;
+  -webkit-box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.about__subtitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.about__p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 147.9%;
+  text-align: center;
+  color: #000000;
+}
+
+.about__info {
+  max-width: 1024px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156.9%;
+  text-align: center;
+  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.about__info::before {
+  content: "";
+  position: absolute;
+  max-width: 760px;
+  width: 100%;
+  height: 150px;
+  top: -24px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/about-circles.svg) center/cover no-repeat;
 }
 
 * {
