@@ -6,16 +6,29 @@
     isolation: isolate;
     display: flex;
     justify-content: flex-end;
+    z-index: 50;
+    transition: 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+        .popup__body{
+            transform: translateX(0);
+        }
+    }
     &__body{
         background: #FFFFFF;
         position: relative;
         z-index: 2;
         max-width: 1060px;
         width: 100%;
+        transition: 300ms ease;
         padding: 60px 19px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transform: translateX(100%);
     }
     &__title{
         font-weight: 700;

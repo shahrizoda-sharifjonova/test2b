@@ -2,7 +2,7 @@ mixin intro()
     .intro 
         .intro__body.container 
             h1.intro__title Поиск по наименованиб продукции
-            form(action="#").intro__form
+            form(action="").intro__form
                 input(type="text" placeholder="Введите что вас интересует..." required).intro__input
                 button(type="submit").intro__btn 
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,30 +18,22 @@ mixin intro()
                     .intro__item.third
                         p.intro__subtitle Описание
                 .intro__content 
-                    .accordion 
-                        button.accordion__button
+                    .accordion
+                        button.accordion__button.active 
                             .intro__item.first
                                 .accordion__row 
-                                    input(type="radio" name="radio" id="radio1").accordion__radio
+                                    input(type="radio" name="radio" id="radio1" checked).accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="100" style="--progress-value: 100">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +49,7 @@ mixin intro()
                                     </clipPath>
                                     </defs>
                                 </svg>
-                        .accordion__content 
+                        .accordion__content.active  
                             .accordion__content-body 
                                 p.accordion__txt Текст пример
                                 p.accordion__txt Текст пример
@@ -69,23 +61,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio2").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,23 +97,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio3").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,23 +133,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio4").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,23 +169,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio4").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -245,23 +205,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio4").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -289,23 +241,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio4").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,23 +277,15 @@ mixin intro()
                                     input(type="radio" name="radio" id="radio4").accordion__radio
                                     .accordion__info 
                                         p.accordion__id 54956734654
-                                        a(href="#!").accordion__link Смотреть 
+                                        p.accordion__link.open-popup Смотреть 
                                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.18752 3.49998C4.18752 3.57191 4.16003 3.64391 4.10511 3.69883L1.29261 6.51133C1.18271 6.62122 1.00475 6.62122 0.894924 6.51133C0.785096 6.40143 0.785025 6.22347 0.894924 6.11364L3.50858 3.49998L0.894924 0.886326C0.785025 0.776428 0.785025 0.598466 0.894924 0.488638C1.00482 0.37881 1.18278 0.37874 1.29261 0.488638L4.10511 3.30114C4.16003 3.35605 4.18752 3.42805 4.18752 3.49998Z" fill="#3BA4D1"/>
                                             </svg>
                             .intro__item.second
-                                .accordion__progress 
-                                    p.accordion__percent 30%
-                                    .accordion__percent-img 
-                                        <svg width="31" height="41" viewBox="0 0 31 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 0C4.89212 5.8338e-08 9.71479 1.15782 14.0737 3.3788C18.4326 5.59977 22.204 8.82085 25.0795 12.7787C27.955 16.7365 29.853 21.3186 30.6183 26.1505C31.3836 30.9824 30.9945 35.9268 29.4828 40.5795L20.6379 37.7057C21.6962 34.4488 21.9685 30.9877 21.4328 27.6054C20.8971 24.223 19.5685 21.0155 17.5557 18.2451C15.5428 15.4746 12.9028 13.2198 9.85159 11.6652C6.80035 10.1105 3.42448 9.3 0 9.3V0Z" fill="url(#paint0_linear_95_234)"/>
-                                            <defs>
-                                            <linearGradient id="paint0_linear_95_234" x1="-31" y1="31" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#B7E9FF"/>
-                                            <stop offset="1" stop-color="#379BC6"/>
-                                            </linearGradient>
-                                            </defs>
-                                        </svg>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar html" data-value="30" style="--progress-value: 30">
+                                    </div>
+                                </div>
                             .intro__item.third 
                                 p.accordion__desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                 <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">

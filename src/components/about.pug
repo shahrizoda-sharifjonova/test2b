@@ -1,6 +1,7 @@
 mixin about()   
     .about 
         .about__body.container 
+            button(type="button").popup__button.about__button Найти орган, лабораторию
             ul.about__list 
                 li.about__li 
                     a(href="#!").about__link 
@@ -68,7 +69,7 @@ mixin about()
                         | Заключить договор
             h2.about__title Test#[span 2]B
             p.about__desc Проверили тех, кто првоерил качество
-            form(action="#").intro__form.about__form
+            form(action="").intro__form.about__form
                 input(type="text" placeholder="Введите что вас интересует..." required).intro__input.about__input
                 button(type="submit").intro__btn.about__btn
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

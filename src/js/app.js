@@ -51,3 +51,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+const popup = document.querySelector('.popup');
+const openPopup = document.querySelectorAll('.open-popup');
+
+openPopup.forEach(el => {
+    el.addEventListener('click', (e)=>{
+        popup.classList.toggle('active')
+    })
+});
+
+const closePopup = document.querySelectorAll('.close-popup');
+closePopup.forEach(closebtn=>{
+    closebtn.addEventListener('click', (e)=>{
+        popup.classList.remove('active')
+    })
+})

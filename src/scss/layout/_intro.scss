@@ -1,3 +1,9 @@
+// @property --progress-value {
+//     syntax: '<integer>';
+//     inherits: false;
+//     initial-value: 3;
+// }
+
 .intro{
     padding-top: 190px;
     padding-bottom: 60px;
@@ -102,6 +108,7 @@
         max-height: 540px;
         height: 100%;
         overflow-y: auto;
+        overflow-x: hidden;
     }
     &__top{
         display: flex;
@@ -132,6 +139,8 @@
         &.second{
             min-width: 185px;
             width: 185px;
+            padding-top: 9px;
+            padding-bottom: 9px;
         }
         &.third{
             border-right: none;
@@ -146,6 +155,9 @@
             border-bottom: 1px solid #DEDEDE;
             &.active{
                 background: #F8F8F8;
+                .progress-bar::after {
+                    background: #F8F8F8;
+                }
                 .intro__item{
                     border: none !important;
                     &.third{
@@ -161,6 +173,10 @@
                 }
             }
             .intro__item{
+                &.second{
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                }
                 &.third{
                     display: flex;
                     align-items: center;
@@ -173,6 +189,49 @@
                         }
                     }
                 }
+            }
+            .progress-bar {
+                width: 62px;
+                height: 62px;
+                border-radius: 50%;
+                position: relative;
+                // background: 
+                // radial-gradient(closest-side, white 79%, transparent 30% 100%),
+                // conic-gradient(from 0deg, #379BC6 0%, #9AD5EB 50%, #E2E2E2 50%, #E2E2E2 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                progress{
+                    display: none;
+                }
+                &.html {
+                    background: 
+                        radial-gradient(closest-side, white 79%, transparent 30% 100%),
+                        conic-gradient(from 0deg, #B7E9FF 0%, #379BC6 calc(var(--progress-value) * 1%), #E2E2E2 calc(var(--progress-value) * 1%), #E2E2E2 100%);
+                }
+            }
+            .progress-bar::before {
+                counter-reset: percentage attr(data-value);
+                content: attr(data-value) '%';
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 21px;
+                text-align: center;
+                color: #000000;
+                z-index: 2;
+            }
+            .progress-bar::after {
+                content: '';
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                right: 6px;
+                bottom: 6px;
+                background: #fff;
+                z-index: 1;
+                border-radius: 50%;
             }
         }
         &__row{
@@ -210,15 +269,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            border: 10px solid #E2E2E2;
-            border-radius: 50%;
             width: 62px;
             height: 62px;
             margin-top: 9px;
             margin-bottom: 9px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
         }
         &__percent{
             font-weight: 500;
@@ -230,6 +287,11 @@
                 position: absolute;
                 top: -10px;
                 right: -10px;
+            }
+            &-border{
+                position: absolute;
+                width: 100%;
+                height: 100%;
             }
         }
         &__desc{
@@ -248,7 +310,8 @@
                 height: 0 !important;
             }
             &.active{
-                display: block;
+                display: block !important;
+                height: max-content;
             }
         }
         &-body{

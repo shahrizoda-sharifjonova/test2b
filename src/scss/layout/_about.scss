@@ -2,14 +2,14 @@
     position: relative;
     z-index: 1;
     padding-bottom: 94px;
-    isolation: isolate;
     &::before{
         content: '';
         position: absolute;
         background: url(../img/tube-1.svg) center / cover no-repeat;
-        width: 195px;
+        width: 165px;
         height: 510px;
         top: -340px;
+        z-index: -2;
     }
     &::after{
         content: '';
@@ -19,6 +19,14 @@
         height: 425px;
         top: 200px;
         right: 0;
+        z-index: -2;
+    }
+    &__button{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-50%);
     }
     &__list{
         display: flex;
@@ -86,7 +94,7 @@
         }
     }
     &__input{
-        padding: 52px 0 25px 30px !important;
+        padding: 52px 30px 25px 30px!important;
     }
     &__btn{
         border-radius: 0px 8px 8px 0px;
