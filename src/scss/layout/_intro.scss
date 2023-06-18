@@ -135,6 +135,8 @@
             padding-left: 40px;
             min-width: 265px;
             width: 265px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
         &.second{
             min-width: 185px;
@@ -145,6 +147,16 @@
         &.third{
             border-right: none;
             padding-left: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            svg{
+                min-width: 26px;
+                width: 26px;
+            }
         }
     }
     .accordion{
@@ -153,6 +165,7 @@
             align-items: stretch;
             justify-content: flex-start;
             border-bottom: 1px solid #DEDEDE;
+            width: 100%;
             &.active{
                 background: #F8F8F8;
                 .progress-bar::after {
@@ -236,11 +249,12 @@
         }
         &__row{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             height: 100%;
         }
         &__radio{
             margin-right: 15px;
+            margin-top: 5px;
             width: 26px;
             height: 26px;
             accent-color: #1F4571;

@@ -568,6 +568,8 @@
   padding-left: 40px;
   min-width: 265px;
   width: 265px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .intro__item.second {
@@ -580,6 +582,23 @@
 .intro__item.third {
   border-right: none;
   padding-left: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.intro__item.third svg {
+  min-width: 26px;
+  width: 26px;
 }
 
 .intro .accordion__button {
@@ -593,6 +612,7 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   border-bottom: 1px solid #DEDEDE;
+  width: 100%;
 }
 
 .intro .accordion__button.active {
@@ -697,14 +717,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
 }
 
 .intro .accordion__radio {
   margin-right: 15px;
+  margin-top: 5px;
   width: 26px;
   height: 26px;
   accent-color: #1F4571;
